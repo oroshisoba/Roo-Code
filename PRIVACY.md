@@ -1,6 +1,6 @@
 # Roo Code Privacy Policy
 
-**Last Updated: September 11th, 2025**
+**Last Updated: March 19th, 2026**
 
 Roo Code respects your privacy and is committed to transparency about how we handle your data. Below is a simple breakdown of where key pieces of data go—and, importantly, where they don’t.
 
@@ -12,6 +12,9 @@ Roo Code respects your privacy and is committed to transparency about how we han
 - **API Keys & Credentials**: If you enter an API key (e.g., to connect an AI model), it is stored locally on your device and never sent to us or any third party, except the provider you have chosen.
 - **Telemetry (Usage Data)**: We collect anonymous feature usage and error data to help us improve Roo Code. This telemetry is powered by PostHog and includes your VS Code machine ID, feature usage patterns, and exception reports. This telemetry does **not** collect personally identifiable information, your code, or AI prompts. You can opt out of this telemetry at any time through the settings.
 - **Marketplace Requests**: When you browse or search the Marketplace for Model Configuration Profiles (MCPs) or Custom Modes, Roo Code makes a secure API call to Roo Code's backend servers to retrieve listing information. These requests send only the query parameters (e.g., extension version, search term) necessary to fulfill the request and do not include your code, prompts, or personally identifiable information.
+- **Cloud Account (Optional)**: If you sign in to a Roo Code cloud account, your authentication is handled by Clerk (clerk.roocode.com). Session tokens are used to access cloud features including: organization and user settings sync, task sharing (sends only a task ID, not conversation content), and credit balance checking. These connections use HTTPS and Bearer token authentication.
+- **Task Sync (Optional, Opt-In)**: If you explicitly enable task sync in your cloud account settings, full conversation history (including any code or file content shared with the AI) is uploaded to Roo Code servers. This feature is disabled by default and requires active opt-in.
+- **Cloud Telemetry (Authenticated users only)**: When signed in, usage events (not including conversation content) may be sent to Roo Code servers to power account-level analytics. Conversation messages are excluded unless task sync is enabled.
 
 ### **How We Use Your Data (If Collected)**
 

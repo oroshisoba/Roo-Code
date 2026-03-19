@@ -179,6 +179,10 @@ export class QwenCodeHandler extends BaseProvider implements SingleCompletionHan
 	}
 
 	private getBaseUrl(creds: QwenOAuthCredentials): string {
+		// NOTE: resource_url is provided by the OAuth server and may override the default
+		// dashscope.aliyuncs.com endpoint. If credentials are compromised, LLM traffic
+		// (including conversation content) could be redirected to an attacker-controlled URL.
+		// Credentials are cached at ~/.qwen/oauth_creds.json.
 		let baseUrl = creds.resource_url || "https://dashscope.aliyuncs.com/compatible-mode/v1"
 		if (!baseUrl.startsWith("http://") && !baseUrl.startsWith("https://")) {
 			baseUrl = `https://${baseUrl}`

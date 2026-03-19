@@ -32,6 +32,11 @@ export type OpenAiCodexModel = ReturnType<OpenAiCodexHandler["getModel"]>
 /**
  * OpenAI Codex base URL for API requests
  * Per the implementation guide: requests are routed to chatgpt.com/backend-api/codex
+ *
+ * NOTE: This is an unofficial internal ChatGPT backend endpoint, not the public
+ * api.openai.com API. LLM traffic (including conversation content) is sent to
+ * ChatGPT's internal infrastructure. This endpoint is undocumented and may change.
+ * See docs/EXTERNAL_API_SECURITY_ANALYSIS.md for full risk assessment.
  */
 const CODEX_API_BASE_URL = "https://chatgpt.com/backend-api/codex"
 
