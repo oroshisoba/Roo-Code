@@ -1,5 +1,7 @@
 import type { OpenAiCodexRateLimitInfo } from "@roo-code/types"
 
+// NOTE: This is an unofficial internal ChatGPT endpoint, not a public OpenAI API.
+// It is used to retrieve rate limit usage information for OpenAI Codex subscriptions.
 const WHAM_USAGE_URL = "https://chatgpt.com/backend-api/wham/usage"
 
 type WhamUsageResponse = {
